@@ -42,7 +42,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import maxBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-max-by@deno/mod.js';
+import maxBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-max-by@v0.2.1-deno/mod.js';
 ```
 
 #### maxBy( N, x, stride, clbk\[, thisArg] )
@@ -192,7 +192,7 @@ var v = maxBy.ndarray( 3, x, 1, x.length-3, accessor );
 ```javascript
 var discreteUniform = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform' ).factory;
 import filledarrayBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-filled-by@deno/mod.js';
-import maxBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-max-by@deno/mod.js';
+import maxBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-max-by@v0.2.1-deno/mod.js';
 
 function accessor( v ) {
     return v * 2.0;
