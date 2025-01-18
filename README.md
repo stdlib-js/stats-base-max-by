@@ -35,38 +35,32 @@ limitations under the License.
 
 > Calculate the maximum value of a strided array via a callback function.
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/stats-base-max-by
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-maxBy = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-max-by@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var maxBy = require( 'path/to/vendor/umd/stats-base-max-by/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-max-by@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.maxBy;
-})();
-</script>
+var maxBy = require( '@stdlib/stats-base-max-by' );
 ```
 
 #### maxBy( N, x, stride, clbk\[, thisArg] )
@@ -87,7 +81,7 @@ var v = maxBy( x.length, x, 1, accessor );
 The function has the following parameters:
 
 -   **N**: number of indexed elements.
--   **x**: input [`Array`][mdn-array], [`typed array`][mdn-typed-array], or an array-like object (excluding strings and functions). 
+-   **x**: input [`Array`][mdn-array], [`typed array`][mdn-typed-array], or an array-like object (excluding strings and functions).
 -   **stride**: index increment.
 -   **clbk**: callback function.
 -   **thisArg**: execution context (_optional_).
@@ -201,7 +195,7 @@ var v = maxBy.ndarray( 3, x, 1, x.length-3, accessor );
 -   If `N <= 0`, both functions return `NaN`.
 -   A provided callback function should return a numeric value.
 -   If a provided callback function does not return any value (or equivalently, explicitly returns `undefined`), the value is **ignored**.
--   When possible, prefer using [`dmax`][@stdlib/stats/base/dmax], [`smax`][@stdlib/stats/base/smax], and/or [`max`][@stdlib/stats/base/max], as, depending on the environment, these interfaces are likely to be significantly more performant.
+-   When possible, prefer using [`dmax`][@stdlib/stats/strided/dmax], [`smax`][@stdlib/stats/base/smax], and/or [`max`][@stdlib/stats/base/max], as, depending on the environment, these interfaces are likely to be significantly more performant.
 
 </section>
 
@@ -213,13 +207,8 @@ var v = maxBy.ndarray( 3, x, 1, x.length-3, accessor );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {.factory;
+```javascript
+var discreteUniform = require( '@stdlib/random-base-discrete-uniform' ).factory;
 var filledarrayBy = require( '@stdlib/array-filled-by' );
 var maxBy = require( '@stdlib/stats-base-max-by' );
 
@@ -232,11 +221,6 @@ console.log( x );
 
 var v = maxBy( x.length, x, 1, accessor );
 console.log( v );
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -251,7 +235,7 @@ console.log( v );
 
 ## See Also
 
--   <span class="package-name">[`@stdlib/stats-base/dmax`][@stdlib/stats/base/dmax]</span><span class="delimiter">: </span><span class="description">calculate the maximum value of a double-precision floating-point strided array.</span>
+-   <span class="package-name">[`@stdlib/stats-strided/dmax`][@stdlib/stats/strided/dmax]</span><span class="delimiter">: </span><span class="description">calculate the maximum value of a double-precision floating-point strided array.</span>
 -   <span class="package-name">[`@stdlib/stats-base/max`][@stdlib/stats/base/max]</span><span class="delimiter">: </span><span class="description">calculate the maximum value of a strided array.</span>
 -   <span class="package-name">[`@stdlib/stats-base/min-by`][@stdlib/stats/base/min-by]</span><span class="delimiter">: </span><span class="description">calculate the minimum value of a strided array via a callback function.</span>
 -   <span class="package-name">[`@stdlib/stats-base/nanmax-by`][@stdlib/stats/base/nanmax-by]</span><span class="delimiter">: </span><span class="description">calculate the maximum value of a strided array via a callback function, ignoring NaN values.</span>
@@ -287,7 +271,7 @@ See [LICENSE][stdlib-license].
 
 ## Copyright
 
-Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
+Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 </section>
 
@@ -339,15 +323,15 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/stats/base/dmax]: https://github.com/stdlib-js/stats-base-dmax/tree/umd
+[@stdlib/stats/strided/dmax]: https://github.com/stdlib-js/stats-strided-dmax
 
-[@stdlib/stats/base/max]: https://github.com/stdlib-js/stats-base-max/tree/umd
+[@stdlib/stats/base/max]: https://github.com/stdlib-js/stats-base-max
 
-[@stdlib/stats/base/min-by]: https://github.com/stdlib-js/stats-base-min-by/tree/umd
+[@stdlib/stats/base/min-by]: https://github.com/stdlib-js/stats-base-min-by
 
-[@stdlib/stats/base/nanmax-by]: https://github.com/stdlib-js/stats-base-nanmax-by/tree/umd
+[@stdlib/stats/base/nanmax-by]: https://github.com/stdlib-js/stats-base-nanmax-by
 
-[@stdlib/stats/base/smax]: https://github.com/stdlib-js/stats-base-smax/tree/umd
+[@stdlib/stats/base/smax]: https://github.com/stdlib-js/stats-base-smax
 
 <!-- </related-links> -->
 
