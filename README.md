@@ -81,7 +81,7 @@ var v = maxBy( x.length, x, 1, accessor );
 The function has the following parameters:
 
 -   **N**: number of indexed elements.
--   **x**: input [`Array`][mdn-array], [`typed array`][mdn-typed-array], or an array-like object (excluding strings and functions). 
+-   **x**: input [`Array`][mdn-array], [`typed array`][mdn-typed-array], or an array-like object (excluding strings and functions).
 -   **stride**: index increment.
 -   **clbk**: callback function.
 -   **thisArg**: execution context (_optional_).
@@ -195,7 +195,7 @@ var v = maxBy.ndarray( 3, x, 1, x.length-3, accessor );
 -   If `N <= 0`, both functions return `NaN`.
 -   A provided callback function should return a numeric value.
 -   If a provided callback function does not return any value (or equivalently, explicitly returns `undefined`), the value is **ignored**.
--   When possible, prefer using [`dmax`][@stdlib/stats/base/dmax], [`smax`][@stdlib/stats/base/smax], and/or [`max`][@stdlib/stats/base/max], as, depending on the environment, these interfaces are likely to be significantly more performant.
+-   When possible, prefer using [`dmax`][@stdlib/stats/strided/dmax], [`smax`][@stdlib/stats/base/smax], and/or [`max`][@stdlib/stats/base/max], as, depending on the environment, these interfaces are likely to be significantly more performant.
 
 </section>
 
@@ -235,7 +235,7 @@ console.log( v );
 
 ## See Also
 
--   <span class="package-name">[`@stdlib/stats-base/dmax`][@stdlib/stats/base/dmax]</span><span class="delimiter">: </span><span class="description">calculate the maximum value of a double-precision floating-point strided array.</span>
+-   <span class="package-name">[`@stdlib/stats-strided/dmax`][@stdlib/stats/strided/dmax]</span><span class="delimiter">: </span><span class="description">calculate the maximum value of a double-precision floating-point strided array.</span>
 -   <span class="package-name">[`@stdlib/stats-base/max`][@stdlib/stats/base/max]</span><span class="delimiter">: </span><span class="description">calculate the maximum value of a strided array.</span>
 -   <span class="package-name">[`@stdlib/stats-base/min-by`][@stdlib/stats/base/min-by]</span><span class="delimiter">: </span><span class="description">calculate the minimum value of a strided array via a callback function.</span>
 -   <span class="package-name">[`@stdlib/stats-base/nanmax-by`][@stdlib/stats/base/nanmax-by]</span><span class="delimiter">: </span><span class="description">calculate the maximum value of a strided array via a callback function, ignoring NaN values.</span>
@@ -271,7 +271,7 @@ See [LICENSE][stdlib-license].
 
 ## Copyright
 
-Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
+Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 </section>
 
@@ -323,7 +323,7 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/stats/base/dmax]: https://github.com/stdlib-js/stats-base-dmax
+[@stdlib/stats/strided/dmax]: https://github.com/stdlib-js/stats-strided-dmax
 
 [@stdlib/stats/base/max]: https://github.com/stdlib-js/stats-base-max
 
