@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-05-31)
+## Unreleased (2025-06-01)
 
 <section class="features">
 
@@ -16,12 +16,23 @@
 
 <!-- /.features -->
 
+<section class="bug-fixes">
+
+### Bug Fixes
+
+-   [`7d340f2`](https://github.com/stdlib-js/stdlib/commit/7d340f209f8105fde0091e9a9641f626a63a7706) - pass input array
+
+</section>
+
+<!-- /.bug-fixes -->
+
 <section class="commits">
 
 ### Commits
 
 <details>
 
+-   [`7d340f2`](https://github.com/stdlib-js/stdlib/commit/7d340f209f8105fde0091e9a9641f626a63a7706) - **fix:** pass input array _(by Athan Reines)_
 -   [`7d64bcb`](https://github.com/stdlib-js/stdlib/commit/7d64bcba9a16806015fb6d22a431c7543f196c2f) - **feat:** add support for accessor arrays and refactor `stats/base/max-by` [(#7129)](https://github.com/stdlib-js/stdlib/pull/7129) _(by Gururaj Gurram, Athan Reines)_
 -   [`ad98e51`](https://github.com/stdlib-js/stdlib/commit/ad98e51fff6bb5eda133fe58b0b877fa1f6426c2) - **refactor:** update paths _(by Aayush Khanna)_
 -   [`e0799e5`](https://github.com/stdlib-js/stdlib/commit/e0799e5da799e74ff3369f652f4380aeb8dfe7fc) - **refactor:** update paths _(by Athan Reines)_
